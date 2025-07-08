@@ -1,0 +1,36 @@
+@import url('normalize.css');
+/*CSSをリセットする*/
+body{
+    background-color: #eee;
+}
+p{
+    color: dimgray;
+}
+h1{
+    text-align: center;
+    font-size: 1.5em;
+}
+header{
+    background-color:#fff;
+    padding: 20px 30px;
+
+}
+main, header, footer{
+    padding: 20px 30px;
+}
+.card{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.center{
+    text-align: center;
+
+}
+text-small{
+    font-size: .8em;
+}
+.card h3{
+    font-size: 1.2em
+    ;
