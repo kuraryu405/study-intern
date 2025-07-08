@@ -1,0 +1,19 @@
+.menu{
+    display: flex;
+    gap: 10px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+nav h1{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+a:not(.logo)hover{
+    color: #646cff;
+    text-decoration: underline;
+}
