@@ -25,7 +25,8 @@ h1{
 .form-group{
     margin-bottom: 1.5rem
 }
-input{
+input[type="text"],
+input[type="email"]{
     border: 1px solid #ddd;
     border-radius: 5px;
     width: 100%;
