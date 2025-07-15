@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript入門</title>
+</head>
+<body>
+    <script>
+       const calcInTax = (price) => {
+        const intax = Math.round(price * 1.1);
+        return intax;
+       }
+
+
+
+       const price = 100;
+       const intax = calcInTax(price);
+       
+       document.write(intax);
+
+       function calcInTax2(price) {
+        return Math.round(price * 1.1);
+       }
+    const price2 = 250;
+    const intax2 = calcInTax2(price2);
+    document.write('<br>');
+    document.write(intax2);
+    </script>    
+</body>
+</html>
