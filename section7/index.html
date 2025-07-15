@@ -26,14 +26,41 @@
                         <input type="radio" name="gender" value="male">
                         <span>男性</span>
                     </label>
-                    
-                
                     <label>
                         <input type="radio" name="gender" value="female">
                         <span>女性</span>
                     </label>
                 </div>
-                
+                <label>興味のある分野</label>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="interest[]" value="sports">
+                        <span>スポーツ</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interest[]" value="music">
+                        <span>音楽</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interest[]" value="art">
+                        <span>美術</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interest[]" value="it">
+                        <span>IT</span>
+                    </label>
+                </div>            
+                <label for="memvbership">会員種別<span class="required">必須</span>
+                </label>  
+                <select name="memvbership" id="memvbership" required>
+                    <option value="">選択してください</option>
+                    <option value="regular">一般</option>
+                    <option value="student">学生</option>
+                    <option value="premium">プレミアム</option>
+                    <option value="senior">シニア</option>
+                </select>
+                <label for="msg">お問い合わせ内容</label>
+                <textarea name="msg" id="msg" rows="5"></textarea>
             </div>
             <button type="submit">
                 submit

@@ -26,7 +26,8 @@ h1{
     margin-bottom: 1.5rem
 }
 input[type="text"],
-input[type="email"]{
+input[type="email"],
+select{
     border: 1px solid #ddd;
     border-radius: 5px;
     width: 100%;
@@ -68,7 +69,8 @@ button:hover {
     font-size: .7em;
     border-radius: 4px;
 }
-.radio-group{
+.radio-group,
+.checkbox-group{
     display: flex;
     gap: 1.5rem;
     margin-top: 3px;
@@ -76,8 +78,16 @@ button:hover {
     font-weight: normal;
 }
 @media (max-width: 680px){
-    .radio-group{
+    .radio-group,
+    .checkbox-group{
         flex-direction: column;
         gap: .5rem;
     }
+}
+select{
+    margin-bottom: 15px;
+}
+textarea{
+    width: 100%;
+    border-radius: 10px;
 }
