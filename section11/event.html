@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript入門</title>
+</head>
+<body>
+    <div>
+        <p>サイコロ；<span id="output">?</span></p>
+    </div>
+    <div>
+        <button id="do_dice">サイコロを振る</button>
+    </div>
+    <script>
+        const doDice = () => {
+            const dice = Math.floor(Math.random() * 6) + 1;
+            document.getElementById('output').textContent = dice;
+        }
+        doDice();
+        document.getElementById('do_dice').addEventListener('click', doDice);
+    </script>
+</body>
+</html>
