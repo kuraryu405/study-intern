@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript入門</title>
+</head>
+<body>
+    <div>
+        <input type="number" id="price">x 1.1 =
+        <span id="ans">?</span>
+        
+    </div>
+    <div>
+        <button id="calc">計算する</button>
+    </div>
+    <script>
+        document.getElementById('calc').addEventListener('click', () => {
+            const price = Number(document.getElementById('price').value);
+            document.getElementById('ans').textContent = Math.round(price * 1.1);
+        });
+    </script>
+</body>
+</html>
