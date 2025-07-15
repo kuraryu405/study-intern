@@ -68,3 +68,16 @@ button:hover {
     font-size: .7em;
     border-radius: 4px;
 }
+.radio-group{
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 3px;
+    justify-content: center;
+    font-weight: normal;
+}
+@media (max-width: 680px){
+    .radio-group{
+        flex-direction: column;
+        gap: .5rem;
+    }
+}
