@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript入門</title>
+</head>
+<body>
+    <dl>
+        <dt>
+            <dd>
+                <select name="pref" id="pref">
+                    <option value="0">都道府県を選択してください</option>
+                    <option value="1">北海道</option>
+                    <option value="2">青森県</option>
+                    <option value="3">岩手県</option>
+                    <option value="4">宮城県</option>
+                    <option value="5">秋田県</option>
+                    <option value="6">山形県</option>
+                    <option value="7">福島県</option>
+                </select>
+            </dd>
+        </dt>
+    </dl>
+    <div>
+        <burron id="send">submit</burron>
+    </div>
+    <script>
+        document.getElementById('send').addEventListener('click', function(){
+            const pref = document.getElementById('pref').value;
+            document.write(pref);
+        });
+    </script>
+</body>
+</html>

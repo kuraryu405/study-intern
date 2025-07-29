@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript入門</title>
+</head>
+<body>
+    <input type="text" id="pass-num" placeholder="パスワードの桁数を入力してください">
+    <button id="pass-btn">パスワードを生成</button>
+
+    <p id="pwd"></p>
+    <script>
+        const seeds = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9','!','@','#','$','%','^','&','*','(',')','-','_','+','=','[',']','{','}','|',';',':',',','.','/','<','>','?','~'];
+        
+        function pwdfunction(passnum){
+            let pass = ''; 
+            for (let i = 0; i < passnum; i++){
+                let randomIndex = Math.floor(Math.random() * seeds.length);
+                pass += seeds[randomIndex];
+            }
+            return pass;
+        }
+        
+        document.getElementById('pass-btn').addEventListener('click', function(){
+            let passnum = parseInt(document.getElementById('pass-num').value);
+            if (isNaN(passnum) || passnum <= 0) {
+                document.getElementById('pwd').textContent = '正しい数字を入力してください';
+                return;
+            }
+            document.getElementById('pwd').textContent = pwdfunction(passnum);
+        });
+       
+    </script>
+</body>
+</html>
