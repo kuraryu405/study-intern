@@ -7,17 +7,7 @@ body {
   width: 100px;
   height: 100px;
   background-color: black;
-  -webkit-animation: sk-bouncedelay 1.4s;
-          animation: sk-bouncedelay 1.4s;
-}
-
-@-webkit-keyframes sk-bouncedelay {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
+  animation: sk-bouncedelay 1.4s;
 }
 
 @keyframes sk-bouncedelay {

@@ -20,39 +20,13 @@ img {
 }
 .cover-slide.inview::after {
   opacity: 1;
-  -webkit-animation-name: kf-cover-slide;
-          animation-name: kf-cover-slide;
-  -webkit-animation-duration: 1.6s;
-          animation-duration: 1.6s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes kf-cover-slide {
-  0% {
-    transform-origin: left;
-    transform: scaleX(0);
-  }
-  50% {
-    transform-origin: left;
-    transform: scaleX(1);
-  }
-  50.1% {
-    transform-origin: right;
-    transform: scaleX(1);
-  }
-  100% {
-    transform-origin: right;
-    transform: scaleX(0);
-  }
+  animation-name: kf-cover-slide;
+  animation-duration: 1.6s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
 }
 
 @keyframes kf-cover-slide {
@@ -79,39 +53,16 @@ img {
 .inview .img-zoom, .inview .bg-img-zoom {
   opacity: 1;
   transition: transform 0.3s ease;
-  -webkit-animation-name: kf-img-show;
-          animation-name: kf-img-show;
-  -webkit-animation-duration: 1.6s;
-          animation-duration: 1.6s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
+  animation-name: kf-img-show;
+  animation-duration: 1.6s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
 }
 .inview .img-zoom:hover, .inview .bg-img-zoom:hover {
   transform: scale(1.05);
-}
-
-@-webkit-keyframes kf-img-show {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  50.1% {
-    opacity: 1;
-    transform: scale(1.5);
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @keyframes kf-img-show {
@@ -139,20 +90,13 @@ img {
   z-index: 1;
   transition: background-color 0.3s ease;
   pointer-events: none;
-  -webkit-animation-name: kf-img-show;
-          animation-name: kf-img-show;
-  -webkit-animation-duration: 1.6s;
-          animation-duration: 1.6s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
+  animation-name: kf-img-show;
+  animation-duration: 1.6s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
 }
 .hover-darken:hover::before {
   background-color: rgba(0, 0, 0, 0.4);
