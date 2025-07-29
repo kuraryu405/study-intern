@@ -12,4 +12,9 @@
   color: black;
   text-decoration: none !important;
   /* ここにボタンのスタイルを追加していこう */
+}
+.try .btn.float:hover {
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  background-color: black;
+  color: white;
 }/*# sourceMappingURL=try.css.map */
