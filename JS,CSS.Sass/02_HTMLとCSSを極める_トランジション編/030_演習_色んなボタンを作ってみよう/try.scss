@@ -23,5 +23,14 @@ $cBlack: black;
         color: $cWhite;
       }
     }
+    &.filled {
+      background-color: $cBlack;
+      color: $cWhite;
+      box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+      &:hover {
+        background-color: $cWhite;
+        color: $cBlack;
+      }
+    }
   }
 }

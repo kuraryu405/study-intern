@@ -17,4 +17,13 @@
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
   background-color: black;
   color: white;
+}
+.try .btn.filled {
+  background-color: black;
+  color: white;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.try .btn.filled:hover {
+  background-color: white;
+  color: black;
 }/*# sourceMappingURL=try.css.map */
