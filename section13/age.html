@@ -19,9 +19,19 @@
             }
             
             getAge(){
+                const now = new Date();
+                let age = now.getFullYear() - this.birth.getFullYear();
+                if (now.getMonth() < this.birth.getMonth() || (now.getMonth() === this.birth.getMonth() && now.getDate() < this.birth.getDate())){
+                    age--;
+                }
                 
+                return age;
             }
         }   
+
+        let taiyo = new Person('太洋', new Date(2006, 5, 26));
+        console.log(taiyo.birth);
+        console.log(taiyo.getAge);
     </script>
 </body>
 </html>
