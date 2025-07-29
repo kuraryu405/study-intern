@@ -11,8 +11,16 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  border-radius: 10px;
+}
+.btn:hover {
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .btn:hover {
   background-color: black;
   color: white;
+}
+.btn.float:hover {
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }/*# sourceMappingURL=style.css.map */
