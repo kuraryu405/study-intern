@@ -32,5 +32,24 @@ $cBlack: black;
         color: $cBlack;
       }
     }
+    &.letter-spacing:hover {
+      background-color: $cBlack;
+      color: $cWhite;
+      letter-spacing: 0.2em;
+    }
+    &.shadow {
+      &:hover {
+        transform: translate(-2.5px, -2.5px);
+        box-shadow: 5px 5px 0 0 $cBlack;
+      }
+    }
+    &.solid {
+      border-radius: 7px;
+      box-shadow: 2px 2px 0 0 $cBlack;
+      &:hover {
+        transform: translate(2px, 2px);
+        box-shadow: none;
+      }
+    }
   }
 }
