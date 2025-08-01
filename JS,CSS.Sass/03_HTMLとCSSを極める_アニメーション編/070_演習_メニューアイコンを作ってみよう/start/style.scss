@@ -17,3 +17,17 @@ $cWhite: white;
         }
     }
 }
+.manu-open{
+    .mobile-menu-icon{
+        & > span{
+            background-color: $cWhite;
+
+            &:nth-child(1){
+                transform: translateY(11px); rotate: (135deg);
+            }
+            &:nth-child(3){
+                transform: translateY(-11px); rotate: (135deg);
+            }           
+        }
+    }
+}

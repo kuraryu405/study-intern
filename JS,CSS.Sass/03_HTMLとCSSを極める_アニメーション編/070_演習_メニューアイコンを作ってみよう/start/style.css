@@ -11,4 +11,16 @@
 }
 .mobile-menu-icon > span:last-child {
   margin-bottom: 0;
+}
+
+.manu-open .mobile-menu-icon > span {
+  background-color: white;
+}
+.manu-open .mobile-menu-icon > span:nth-child(1) {
+  transform: translateY(11px);
+  rotate: 135deg;
+}
+.manu-open .mobile-menu-icon > span:nth-child(3) {
+  transform: translateY(-11px);
+  rotate: 135deg;
 }/*# sourceMappingURL=style.css.map */

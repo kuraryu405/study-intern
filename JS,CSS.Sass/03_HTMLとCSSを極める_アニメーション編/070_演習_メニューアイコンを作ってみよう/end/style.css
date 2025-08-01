@@ -19,6 +19,9 @@
 .menu-open {
   background-color: black;
 }
+.menu-open .mobile-menu-icon {
+  background-color: black;
+}
 .menu-open .mobile-menu-icon > span {
   background-color: white;
 }
