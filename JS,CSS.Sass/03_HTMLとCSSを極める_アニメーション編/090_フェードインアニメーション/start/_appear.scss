@@ -5,8 +5,16 @@
         transform: translateY(6px);
     }
     & .inview{
-        opacity: 1;
-        transform: none;
+        & .item{
+            opacity: 1;
+            transform: none;
+
+            @for $i from 1 through 10{
+                &:nth-child(#{$i}){
+                    transition-delay: 0.2 * $i;
+                }
+            }
+        }
     }
 }
 @each{
