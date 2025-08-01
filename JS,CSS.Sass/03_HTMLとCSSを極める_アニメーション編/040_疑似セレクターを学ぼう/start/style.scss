@@ -1,0 +1,17 @@
+a{
+    color: orange;
+    &:visited{
+        color: black;
+    }
+    &:hover{
+        color: red($color: #000000);
+    }
+
+}
+
+div{
+    color: red($color: #000000);
+    & span:nth-child(3){
+        color: black;
+    }
+}

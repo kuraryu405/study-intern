@@ -1,1 +1,16 @@
-/*# sourceMappingURL=style.css.map */
+a {
+  color: orange;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: 0;
+}
+
+div {
+  color: 0;
+}
+div span:nth-child(3) {
+  color: black;
+}/*# sourceMappingURL=style.css.map */
