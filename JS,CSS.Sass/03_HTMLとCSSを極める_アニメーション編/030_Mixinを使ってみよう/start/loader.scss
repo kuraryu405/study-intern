@@ -3,8 +3,9 @@ $cBlack: black;
 body {
   text-align: center;
 }
-@mixin animation($name, ){
+@mixin animation($name, $duration: 1s){
   animation-name: $name;
+  animation-duration: $duration;
 }
 .rect {
   display: inline-block;
@@ -12,7 +13,7 @@ body {
   height: 100px;
   background-color: $cBlack;
   animation: sk-bouncedelay 1.4s;
-  @include animation($name: sk-bouncedelay);
+  @include animation(sk-bouncedelay);
   // animation-timing-function: ease;
   // animation-delay: 3s;
   // animation-iteration-count: infinite;
