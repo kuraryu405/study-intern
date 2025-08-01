@@ -1,4 +1,5 @@
 #container {
+  position: relative;
   padding: 1rem;
   background-color: gray;
 }
@@ -13,6 +14,7 @@ div {
 }
 
 .div-1 {
+  position: absolute;
   background: orange;
 }
 
@@ -21,11 +23,15 @@ div {
 }
 
 .div-3 {
-  background: teal;
+  background: gray;
 }
 
 .div-4 {
   width: 80px;
   height: 80px;
   background-color: violet;
+}
+
+.body {
+  background-color: #000;
 }/*# sourceMappingURL=style.css.map */

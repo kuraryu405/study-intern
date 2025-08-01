@@ -16,31 +16,7 @@ $cBlack: black;
   transition: all 0.3s;
   border-radius: 10px;
   &.slide-bg {
-    position: relative;
-    overflow: hidden;
-    span {
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-      background-color: $cBlack;
-      transform: translateY(100%);
-      transition: transform 0.3s;
-      border-radius: 10px;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    &:hover {
-      span {
-        transform: translateY(0);
-        transition-delay: 0.3s;
-        background-color: $cWhite;
-        color: $cBlack;
-        border: 1px solid $cBlack;
-        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
-        transform: translateY(0);
-      }
-    }
+    
   }
 
   &:hover {
