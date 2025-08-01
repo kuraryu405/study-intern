@@ -4,14 +4,14 @@ body {
   text-align: center;
 }
 
-@use "mixin"
+@use "mixin";
 
 .rect {
   display: inline-block;
   width: 100px;
   height: 100px;
   background-color: $cBlack;
-  @include animation($name: sk-bouncedelay);
+  @include mixin.animation($name: sk-bouncedelay);
   // animation: sk-bouncedelay 1.4s;
   // animation-timing-function: ease;
   // animation-delay: 3s;
