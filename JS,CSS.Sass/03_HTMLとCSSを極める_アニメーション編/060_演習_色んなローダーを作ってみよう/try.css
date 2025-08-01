@@ -7,4 +7,22 @@
   height: 40px;
   background-color: #333;
   margin: 100px auto;
+  animation-name: saisho;
+  animation-duration: 1.2s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes saisho {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  50% {
+    transform: rotateX(-180deg) rotateY(0);
+  }
+  100% {
+    transform: rotateX(0) rotateY(-180deg);
+  }
 }/*# sourceMappingURL=try.css.map */

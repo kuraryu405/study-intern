@@ -7,6 +7,7 @@
     height: 40px;
     background-color: #333;
     margin: 100px auto;
+    @include animation(saisho, 1.2s, ease, 0s, infinite);
   }
 
   .double-spinner {
@@ -16,4 +17,17 @@
   .rect-spinner {
     
   }
+}
+
+@keyframes saisho {
+  0%{
+    transform: rotateX(0) rotateY(0);
+  }
+  50%{
+    transform: rotateX(-180deg) rotateY(0);
+
+  }
+  100%{
+    transform: rotateX(0) rotateY(-180deg);
+  }  
 }
