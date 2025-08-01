@@ -12,10 +12,12 @@
   cursor: pointer;
   transition: all 0.3s;
 }
-.btn.slide-bg {
+.btn.cover-3d {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  transform-style: preserve-3d;
+  perspective: 300px;
 }
 .btn.slide-bg::before {
   content: "";
