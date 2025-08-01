@@ -1,4 +1,4 @@
-@use 'mixin';
+@use 'mixin' as *;
 body{
     margin: 0;
 }
@@ -13,4 +13,19 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    &.inview{
+        & .char{
+            @include animation($name: kf-animate-chars, $duration: 0.5s, $timing-function: cubic-bezier(0.39, 1.57, 0.58,1), $fill-mode: both)
+        }
+    }
+}
+@keyframes kf-animate-chars {
+    0%{
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
