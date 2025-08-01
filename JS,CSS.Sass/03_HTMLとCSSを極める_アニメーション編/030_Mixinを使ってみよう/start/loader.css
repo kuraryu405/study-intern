@@ -8,6 +8,7 @@ body {
   height: 100px;
   background-color: black;
   animation: sk-bouncedelay 1.4s;
+  animation-name: sk-bouncedelay;
 }
 
 .paused {
