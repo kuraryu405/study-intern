@@ -2,13 +2,15 @@ $cBlack: black;
 $cWhite: white;
 
 .mobile-menu-icon {
+    background-color: transparent;
+    border: none;
+
     & > span {
         background-color: $cBlack;
         width: 35px;
         height: 2px;
         display: block;
         margin-bottom: 9px;
-        transition: transform 0.7s;
 
         &:last-child {
             margin-bottom: 0;

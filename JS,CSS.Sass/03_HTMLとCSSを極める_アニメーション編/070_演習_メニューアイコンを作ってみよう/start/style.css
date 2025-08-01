@@ -1,10 +1,13 @@
+.mobile-menu-icon {
+  background-color: transparent;
+  border: none;
+}
 .mobile-menu-icon > span {
   background-color: black;
   width: 35px;
   height: 2px;
   display: block;
   margin-bottom: 9px;
-  transition: transform 0.7s;
 }
 .mobile-menu-icon > span:last-child {
   margin-bottom: 0;
