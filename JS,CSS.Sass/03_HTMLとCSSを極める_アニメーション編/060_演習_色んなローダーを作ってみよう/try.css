@@ -1,4 +1,10 @@
 @charset "UTF-8";
 .try {
   /** ここに記述しよう */
+}
+.try .spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  margin: 100px auto;
 }/*# sourceMappingURL=try.css.map */
