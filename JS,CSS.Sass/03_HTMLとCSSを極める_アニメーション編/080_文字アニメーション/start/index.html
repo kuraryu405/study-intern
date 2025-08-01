@@ -19,7 +19,12 @@
             <span class="char">O</span>
             <span class="char">N</span>
         </div>
-        <button onclick="document.querySelector('.animate-title').classList.toggle('inview')">Animation</button>
+        <button id="animation-btn">Animation</button>
+        <script>
+            document.getElementById('animation-btn').addEventListener('click', function() {
+                document.querySelector('.animate-title').classList.toggle('inview');
+            });
+        </script>
     </div>
 </body>
 </html>
