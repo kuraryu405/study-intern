@@ -4,8 +4,11 @@ body {
   text-align: center;
 }
 @mixin animation($name, $duration: 1s){
-  animation-name: $name;
-  animation-duration: $duration;
+  animation: {
+    name: $name;
+    duration: $duration;
+  }
+
 }
 .rect {
   display: inline-block;
