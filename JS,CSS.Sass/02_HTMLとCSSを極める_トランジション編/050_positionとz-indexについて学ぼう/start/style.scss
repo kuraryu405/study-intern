@@ -16,18 +16,24 @@ div {
 .div-1 {
   position: absolute;
   background: orange;
+  z-index: 10;
+  top: 0;
+  left: 0;
 }
 .div-2 {
   background: tomato;
+  z-index: 5;
 }
 .div-3 {
   background: gray;
+  z-index: 1;
 }
 .div-4 {
   width: 80px;
   height: 80px;
   background-color: violet;
+  z-index: 15;
 }
 .body{
-  background-color: #000;
+  background-color: #fff;
 }

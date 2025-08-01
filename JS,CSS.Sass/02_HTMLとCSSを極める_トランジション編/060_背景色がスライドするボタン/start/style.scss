@@ -16,16 +16,27 @@ $cBlack: black;
   transition: all 0.3s;
   border-radius: 10px;
   &.slide-bg {
+    position: relative;
+    overflow: hidden;
     & span{
       display: inline-block;
       width: 100%;
       height: 100%;
       background-color: $cBlack;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      transition: all 0.3s;
     }
   }
 
-  &:hover {
-    background-color: $cBlack;
+  &:hover{
     color: $cWhite;
+    z-index: 20;
+    & span{
+      transform: none;
+      z-index: -1;
+    }
   }
 }

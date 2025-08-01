@@ -13,13 +13,26 @@
   transition: all 0.3s;
   border-radius: 10px;
 }
+.btn.slide-bg {
+  position: relative;
+  overflow: hidden;
+}
 .btn.slide-bg span {
   display: inline-block;
   width: 100%;
   height: 100%;
   background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: all 0.3s;
 }
 .btn:hover {
-  background-color: black;
   color: white;
+  z-index: 20;
+}
+.btn:hover span {
+  transform: none;
+  z-index: -1;
 }/*# sourceMappingURL=style.css.map */
