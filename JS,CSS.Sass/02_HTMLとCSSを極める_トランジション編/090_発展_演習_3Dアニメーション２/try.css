@@ -26,4 +26,15 @@
   line-height: 40px;
   text-align: center;
   transition: all 0.3s;
+  transform-origin: center center -25px;
+}
+.try .btn.cubic .hovering {
+  background-color: black;
+  color: white;
+  transform: rotateX(-900deg);
+  transform-origin: center center -25px;
+}
+.try .btn.cubic .default {
+  background-color: white;
+  color: black;
 }/*# sourceMappingURL=try.css.map */

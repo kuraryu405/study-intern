@@ -26,7 +26,18 @@ $cBlack: black;
         line-height: 40px;
         text-align: center;
         transition: all 0.3s;
-        
+        transform-origin: center center -25px;
+      }
+      & .hovering{
+        background-color: $cBlack;
+        color: $cWhite;
+        transform: rotateX(-900deg);
+        transform-origin: center center -25px;
+
+      }
+      & .default{
+        background-color: $cWhite;
+        color: $cBlack; 
       }
       /** スタイルをここに追加。*/
     }
