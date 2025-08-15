@@ -12,6 +12,7 @@ function reduce(arry, callback, defaultValue) {
         accu = callback(accu, curr);
     }
     return accu;
+    
 }
 
 const result = strArry.reduce(tag, "");
