@@ -1,4 +1,11 @@
 /* Loading Barのスタイル */
+#global-container{
+    transition: opacity 1s;
+}
+
+.pace-running #global-container{
+    opacity: 0;
+}
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
