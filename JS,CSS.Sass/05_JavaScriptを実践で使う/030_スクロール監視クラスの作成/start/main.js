@@ -19,3 +19,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const io = new IntersectionObserver(cb, options);
     els.forEach(el => io.observe(el));
 });
+
+class ScrollObserver {
+    constructor(els, cb){
+        this.els = document.querySelectorAll(els);
+        this.cb = cb;
+        this._init();
+    }
+    _init(){
+        this.els.forEach(el => {
+            this.cb(el);
+        });
+    }
+}
