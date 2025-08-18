@@ -44,3 +44,15 @@
   @extend .font-sm;
   color: $cSubTitle;
 }
+.content-width{
+  margin: 0 auto;
+  width: 90%;
+  max-width: $contentMaxWidth;
+}
+
+.flex{
+  display: flex;
+  flex-direction: column;
+  @include mq(md){
+    flex-direction: row;
+}
