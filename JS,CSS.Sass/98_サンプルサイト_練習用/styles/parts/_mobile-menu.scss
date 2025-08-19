@@ -1,6 +1,5 @@
 @use "../globals" as *;
 
-
 $cMenuClose: $cBlack;
 $cMenuOpen: $cBlack;
 
@@ -20,6 +19,10 @@ $cMenuOpen: $cBlack;
     border: none;
     outline: none !important;
     cursor: pointer;
+
+    @include mq(lg) {
+      display: none;
+    }
 
     & > span {
       background-color: $cMenuClose;

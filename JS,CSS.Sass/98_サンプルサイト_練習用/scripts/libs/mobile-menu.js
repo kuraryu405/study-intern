@@ -15,7 +15,6 @@ class MobileMenu {
 
     return isTouchCapable ? "touchstart" : "click";
   }
-
   _toggle() {
     this.DOM.container.classList.toggle("menu-open");
   }

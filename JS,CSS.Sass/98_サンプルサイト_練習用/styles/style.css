@@ -207,6 +207,11 @@
   height: 500px;
   overflow: hidden;
 }
+@media screen and (min-width: 960px) {
+  .swiper-slide {
+    box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+  }
+}
 .swiper-slide > img {
   width: 100%;
   height: 100%;
@@ -547,6 +552,11 @@
   outline: none !important;
   cursor: pointer;
 }
+@media screen and (min-width: 960px) {
+  .mobile-menu__btn {
+    display: none;
+  }
+}
 .mobile-menu__btn > span {
   background-color: black;
   width: 35px;
@@ -643,44 +653,44 @@ img {
   vertical-align: bottom;
 }
 
-.mb-sm {
+.mb-sm, .travel__img, .houses__title, .popular__title, .sub-title {
   margin-bottom: 16px !important;
 }
 
-.mb-lg {
+.mb-lg, .travel, .houses, .popular__btn {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg {
+  .mb-lg, .travel, .houses, .popular__btn {
     margin-bottom: 150px !important;
   }
 }
 
-.pb-sm {
+.pb-sm, .travel__texts {
   padding-bottom: 16px !important;
 }
 
-.pb-lg {
+.pb-lg, .hero {
   padding-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .pb-lg {
+  .pb-lg, .hero {
     padding-bottom: 150px !important;
   }
 }
 
-.content-width {
+.content-width, .header__inner, .travel, .houses, .popular__header, .popular__container, .footer {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
 }
 
-.flex {
+.flex, .header__nav, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 600px) {
-  .flex {
+  .flex, .header__nav, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -688,11 +698,6 @@ img {
 
 .purple {
   color: #904669;
-}
-
-#main-content {
-  position: relative;
-  z-index: 0;
 }
 
 .font-sm, .sub-title {
@@ -704,20 +709,20 @@ img {
   }
 }
 
-.font-md {
+.font-md, .popular__title {
   font-size: 17px;
 }
 @media screen and (min-width: 960px) {
-  .font-md {
+  .font-md, .popular__title {
     font-size: 19px;
   }
 }
 
-.font-lr {
+.font-lr, .houses__title {
   font-size: 17px;
 }
 @media screen and (min-width: 960px) {
-  .font-lr {
+  .font-lr, .houses__title {
     font-size: 23px;
   }
 }
@@ -739,4 +744,350 @@ img {
 
 .sub-title {
   color: #535353;
+}
+
+#container {
+  position: relative;
+  z-index: 10;
+  background: white;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+#main-content {
+  position: relative;
+  z-index: 0;
+}
+
+main {
+  position: relative;
+  z-index: -1;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+.header.triggered {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav {
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  display: none;
+}
+@media screen and (min-width: 960px) {
+  .header__nav {
+    display: block;
+  }
+}
+.header__ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+.header__li {
+  margin: 10px;
+}
+@media screen and (min-width: 600px) {
+  .header__li {
+    margin-left: 30px;
+    margin-right: 0;
+  }
+}
+.header__li > a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header .logo {
+  justify-content: center;
+}
+@media screen and (min-width: 600px) {
+  .header .logo {
+    font-size: 35px;
+    justify-content: flex-start;
+  }
+}
+
+.travel__inner {
+  position: relative;
+  z-index: 0;
+  justify-content: space-between;
+  background: #eaebe6;
+  padding: 15px;
+}
+@media screen and (min-width: 600px) {
+  .travel__inner {
+    padding: 50px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .travel__inner {
+    padding: 50px 150px;
+  }
+}
+.travel__img {
+  height: 300px;
+  transition: box-shadow 0.5s ease 1.6s;
+}
+.travel__img.inview {
+  box-shadow: inset 0 0 30px black;
+}
+@media screen and (min-width: 600px) {
+  .travel__img {
+    flex-basis: 47%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .travel__img {
+    height: 400px;
+  }
+}
+.travel__img > img {
+  position: relative;
+  z-index: -1;
+  opacity: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 600px) {
+  .travel__texts {
+    display: flex;
+    align-items: flex-end;
+    flex-basis: 47%;
+  }
+}
+.travel__texts.inview .travel__title::before {
+  animation-name: scaleX;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-delay: 1.5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+.travel__title {
+  position: relative;
+}
+.travel__title::before {
+  display: none;
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100px;
+  top: 50%;
+  left: -120px;
+  background: black;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+@media screen and (min-width: 960px) {
+  .travel__title::before {
+    display: block;
+  }
+}
+@media screen and (min-width: 960px) {
+  .travel__description {
+    margin-bottom: 40px;
+  }
+}
+
+@keyframes scaleX {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@media screen and (min-width: 600px) {
+  .houses__item {
+    flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .houses__item {
+    margin-bottom: 60px;
+  }
+}
+.houses__btn {
+  text-align: center;
+  flex-basis: 100%;
+}
+
+.popular__inner {
+  position: relative;
+}
+.popular__inner::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 90%;
+  width: 100%;
+  background: #eaebe6;
+}
+.popular__container {
+  position: relative;
+  z-index: 2;
+  justify-content: space-between;
+}
+@media screen and (min-width: 600px) {
+  .popular__item {
+    flex-basis: 47%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .popular__item {
+    flex-basis: 25%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .popular__item {
+    flex-basis: 23%;
+  }
+}
+.popular__img {
+  height: 150px;
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 960px) {
+  .popular__img {
+    height: 335px;
+  }
+}
+.popular__img > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.popular__btn {
+  text-align: center;
+  flex-basis: 100%;
+}
+
+.footer {
+  padding: 60px 0;
+}
+.footer__nav {
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.footer__ul {
+  list-style: none;
+  padding: 0;
+}
+.footer__li {
+  margin: 10px;
+}
+@media screen and (min-width: 600px) {
+  .footer__li {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+}
+.footer__li > a {
+  color: #535353;
+  text-decoration: none;
+}
+.footer > .logo {
+  font-size: 38px;
+  justify-content: center;
+}
+@media screen and (min-width: 600px) {
+  .footer > .logo {
+    justify-content: flex-start;
+  }
+}
+
+.logo {
+  font-size: 42px;
+  display: flex;
+}
+.logo__img {
+  width: 0.7em;
+}
+.logo__world {
+  color: #904669;
+}
+
+.side {
+  display: none;
+  position: fixed;
+  top: 70%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+@media screen and (min-width: 1280px) {
+  .side {
+    display: block;
+  }
+}
+.side .tween-animate-title {
+  color: black;
+  text-decoration: none !important;
+  margin: 0 40px;
+  vertical-align: middle;
+  letter-spacing: 2px;
+}
+.side.left {
+  left: -50px;
+}
+.side.left.inview {
+  left: 50px;
+}
+.side.left .side__inner {
+  transform-origin: top left;
+  transform: rotate(-90deg);
+}
+.side.right {
+  right: -50px;
+}
+.side.right.inview {
+  right: 50px;
+}
+.side.right .side__inner {
+  transform-origin: top right;
+  transform: rotate(90deg);
+}
+
+.icon {
+  position: relative;
+}
+.icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  width: 1em;
+  height: 1em;
+  transform: translateY(-50%);
+  background-position: center;
+  background-repeat: none;
+  background-size: contain;
+}
+.icon.twitter::before {
+  background-image: url(../images/twitter.svg);
+}
+.icon.fb::before {
+  background-image: url(../images/facebook.svg);
 }/*# sourceMappingURL=style.css.map */

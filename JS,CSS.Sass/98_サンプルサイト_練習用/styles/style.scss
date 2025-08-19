@@ -1,8 +1,8 @@
-@use 'parts/appear'; // appearアニメーション
-@use 'parts/button'; // buttonアニメーション
-@use 'parts/hero-slider'; // 画面トップスライダー
-@use 'parts/text-animation'; // テキストアニメーション
-@use 'parts/image-slide'; // 画像スライドアニメーション
-@use 'parts/mobile-menu'; // モバイルメニュー
+@use 'parts/appear';
+@use 'parts/button';
+@use 'parts/hero-slider';
+@use 'parts/text-animation';
+@use 'parts/image-slide';
+@use 'parts/mobile-menu';
 
-@use "pages/home"; // トップ画面スタイル（ページ毎に作成）
+@use "pages/home";

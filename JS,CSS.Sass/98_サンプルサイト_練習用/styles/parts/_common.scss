@@ -1,7 +1,7 @@
 @use "../globals" as *;
 
 body {
-  font-family: "Kameron", "Noto Sans JP", sans-serif;
+  font-family: 'Kameron', 'Noto Sans JP', sans-serif;
 }
 
 img {
@@ -53,11 +53,6 @@ img {
   color: $cWineRed;
 }
 
-#main-content {
-  position: relative;
-  z-index: 0;
-}
-
 // font
 .font-sm {
   font-size: 14px;
@@ -97,5 +92,6 @@ img {
 
 .sub-title {
   @extend .font-sm;
+  @extend .mb-sm;
   color: $cSubTitle;
 }
