@@ -29,7 +29,11 @@
       "id": "abc418_c",
       "label": "C",
       "title": "Flush",
-      "url": "https://atcoder.jp/contests/abc418/tasks/abc418_c"
+      "url": "https://atcoder.jp/contests/abc418/tasks/abc418_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc418_d",

@@ -1,14 +1,33 @@
-//b
 let input = require('fs').readFileSync('/dev/stdin', 'utf8');
-word = input.match('t.*t')
+let word = input.match(/t.*t/);
 let cnt = 0
-for (let i = 0; i <= word.length; i++){
-    if (word[i] == 't'){
-        cnt++
+
+
+function gcd(a, b) {
+    while (b !== 0) {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+let str = word[0];  
+for (let i = 0; i < str.length; i++) {
+    if (str[i] === 't') {
+        cnt++;
     }
 }
 if (cnt == 0){
-    console.log(0)
+    console.log(0);
 }else{
-    console.log(cnt - 2 / word.length -2);
+    let numerator = cnt - 2;
+    let denominator = str.length - 2;
+    
+    // 約分
+    let divisor = gcd(Math.abs(numerator), Math.abs(denominator));
+    let simplifiedNum = numerator / divisor;
+    let simplifiedDen = denominator / divisor;
+    
+    console.log(simplifiedNum + '/' + simplifiedDen);
 }
