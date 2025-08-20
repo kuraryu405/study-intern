@@ -1,33 +1,14 @@
-let input = require('fs').readFileSync('/dev/stdin', 'utf8');
-let word = input.match(/t.*t/);
-let cnt = 0
+let input = require('fs').readFileSync('/dev/stdin', 'utf8').trim();
+let maxRate = 0;
 
-
-function gcd(a, b) {
-    while (b !== 0) {
-        let temp = b;
-        b = a % b;
-        a = temp;
-    }
-    return a;
-}
-
-let str = word[0];  
-for (let i = 0; i < str.length; i++) {
-    if (str[i] === 't') {
-        cnt++;
+for (let i = 0; i < input.length; i++) {
+    for (let j = i + 2; j < input.length; j++) {
+        let sub = input.slice(i, j + 1);
+        if (/^t.*t$/.test(sub)) {
+            let tCount = sub.split('').filter(c => c === 't').length;
+            let rate = (tCount - 2) / (sub.length - 2);
+            if (rate > maxRate) maxRate = rate;
+        }
     }
 }
-if (cnt == 0){
-    console.log(0);
-}else{
-    let numerator = cnt - 2;
-    let denominator = str.length - 2;
-    
-    // 約分
-    let divisor = gcd(Math.abs(numerator), Math.abs(denominator));
-    let simplifiedNum = numerator / divisor;
-    let simplifiedDen = denominator / divisor;
-    
-    console.log(simplifiedNum + '/' + simplifiedDen);
-}
+console.log(maxRate.toFixed(17));

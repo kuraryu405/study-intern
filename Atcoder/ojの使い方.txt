@@ -1,0 +1,36 @@
+acc new [URLのcontests/以下がコンテストコード]
+でディレクトリが作成される
+
+
+例：
+.
+└── abc314
+    ├── a
+    │   ├── main.js
+    │   └── test
+    │       ├── sample-1.in
+    │       ├── sample-1.out
+    │       ├── sample-2.in
+    │       ├── sample-2.out
+    │       ├── sample-3.in
+    │       └── sample-3.out
+    └── contest.acc.json
+
+$ cd abc314/a
+$ oj t -c "node main.js"
+
+これを打って
+ACって出れば正解
+
+// 問題のテストデータを取得
+$ acc new xxx （xxxは問題コード）
+
+// テストデータの追加
+//（abc314などの問題ディレクトリの場所で実行すると、後からテストデータを追加できます）
+$ acc add
+
+// テストの実行
+$ oj t -c "node main.js"
+
+// 提出
+$ acc submit -s -- -l 5009

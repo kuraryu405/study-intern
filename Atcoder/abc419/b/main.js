@@ -7,9 +7,9 @@ for(let i of nums){
     }else if(i[0] == 2){
         let minVal = Math.min(...box);
         console.log(minVal);
-        let idx = box.indexOf(minVal.toString());
-        if (idx !== -1) {
-            box.splice(idx, 1);
+        box.splice(box.indexOf(minVal.toString()), 1);
+        console.log(box);
         }
-    };
-}
+    }
+
+    
