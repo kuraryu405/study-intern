@@ -1193,3 +1193,51 @@ RAID（Redundant Array of Independent Disks／独立ディスク冗長配列）�
 - **MTTR**：平均修理時間
 
 ***
+# クライアントサーバシステム
+
+- サーバが複数のクライアント（PC、端末）と接続
+- 必要に応じて集中処理（サーバ側）・分散処理（クライアント側）を使い分ける
+
+***
+
+# クラウドサービスの構造
+
+| 層              | サービス                      |
+|:---------------|:----------------------------|
+| アプリケーション | SaaS (Software as a Service)      |
+| ミドルウェア/API |                              |
+| OS              | PaaS (Platform as a Service)      |
+| サーバ本体       | IaaS (Infrastructure as a Service) |
+
+- どの機能を含むかで呼び方が異なる
+
+***
+
+# RASIS（システム設計に求められる5つの特性）
+
+- Reliability（信頼性）：正常に稼働し続ける
+- Availability（可用性）：使いたい時に使える
+- Serviceability（保守性）：修理や点検のしやすさ
+- Integrity（完全性）：データの正しさ・一貫性
+- Security（機密性）：不正アクセスや情報漏洩の防御
+
+***
+
+# MTTR・MTBF
+
+- MTTR（Mean Time to Recovery）：平均復旧時間  
+  故障→修理までにかかる平均時間
+
+- MTBF（Mean Time Between Failures）：平均故障間隔  
+  稼働から次に故障するまでの平均時間
+
+- 稼働率（Uptime）の計算式
+  ```
+  Uptime = MTBF / (MTTR + MTBF)
+  ```
+
+- 稼働と故障・修理のタイムラインイメージ
+  ```
+  [稼働]→[故障・修理]→[稼働]→...
+  ```
+
