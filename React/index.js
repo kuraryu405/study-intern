@@ -50,6 +50,9 @@ sumfunc(...arr1); // dumfunc(arr1[0], arr1[1]);
 const att2 = [1,2,3,4,5];
 const [num1, num2, ...arr3] = arr2;
 
+console.log(num1); // 1
+console.log(num2); // 2
+console.log(arr3); // [3, 4, 5]
 
 
 
