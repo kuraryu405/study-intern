@@ -1,3 +1,5 @@
+
+
 const button = document.querySelectorAll('.btn');
 
 let result = ''; 
@@ -66,3 +68,5 @@ tyoki.addEventListener('click', () => {
         document.querySelector('#result-img').innerHTML = '<img src="img/gu.png" alt="グー">';
     }
 });
+
+
