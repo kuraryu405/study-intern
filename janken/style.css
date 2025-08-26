@@ -6,6 +6,10 @@ h1{
     margin-bottom: 100px;
 }
 
+.button-conttainer {
+    text-align: center;
+}
+
 
 .btn{
     display: inline-block;
@@ -48,6 +52,12 @@ h1{
 }
 
 #result {
+    margin-top: 60px;
+    text-align: center;
+    font-size: larger;
+}
+
+#result-img {
     margin-top: 60px;
     text-align: center;
     font-size: larger;
