@@ -1,39 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todoapp</title>
-</head>
-<body>
-    <div>
-        <input type="text" placeholder="Enter your todo">
-        <button>add</button>
+<html>
+  <head>
+    <title>TODO(JS)</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="input-area">
+      <input id="add-text" placeholder="TODOを入力" />
+      <button id="add-button">追加</button>
     </div>
-    <div>
-        <p>Incomplete</p>
-        <ul>
-            <li>
-                <div>
-                    <p>todo</p>
-                    <button>done</button>
-                    <button>del</button>
-                </div>
-            </li>
-        </ul>
+    <div class="incomplete-area">
+      <p class="title">未完了のTODO</p>
+      <ul id="incomplete-list">
+        <li>
+          <div class="list-row">
+            <p class="todo-item">TODOです</p>
+            <button>完了</button>
+            <button>削除</button>
+          </div>
+        </li>
+        <li>
+          <div class="list-row">
+            <p class="todo-item">TODOです</p>
+            <button>完了</button>
+            <button>削除</button>
+          </div>
+        </li> 
+      </ul>
     </div>
-    <div>
-        <p>complete</p>
-        <ul>
-            <li>
-                <div>
-                    <p>todo</p>
-                    <button>back</button>
-                    <button>del</button>
-                </div>
-            </li>
-        </ul>
+    <div class="complete-area">
+      <p class="title">完了したTODO</p>
+      <ul id="complete-list">
+   <li>
+          <div class="list-row">
+            <p class="todo-item">TODOでした</p>
+            <button>戻す</button>
+          </div>
+        </li>
+      </ul>
     </div>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
