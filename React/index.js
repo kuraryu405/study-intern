@@ -56,3 +56,19 @@ console.log(arr3); // [3, 4, 5]
 
 
 
+
+
+//map filter
+
+//従来
+
+const namearr = ['狐', '猫', '犬', '虎', '馬'];
+
+for (let index = 0; index < array.length; index++) {
+    console.log(array[index]);
+    
+}
+
+namearr.map((name) => {
+    return name;
+});
