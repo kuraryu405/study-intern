@@ -79,4 +79,18 @@ const newnumarr = numarr.filter((num) => {
 })
 
 
+//三項演算子
+
+//ある条件？　条件がtrueの時 :　条件がFALSEの時
+
+const val = 1 > 2 ? 'true' : 'false';
+console.log(val);
+//false
+
+const num = 1300;
+console.log(num.toLocaleString());
+// 1,300
+
+
+
 
