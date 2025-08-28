@@ -92,5 +92,9 @@ console.log(num.toLocaleString());
 // 1,300
 
 
+const checksum = (num1, num2) => {
+    return num1 + num2 > 100 ? '100より大きい':'100より小さい';
+}
+
 
 
