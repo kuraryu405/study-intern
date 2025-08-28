@@ -72,3 +72,11 @@ for (let index = 0; index < array.length; index++) {
 namearr.map((name) => {
     return name;
 });
+
+const numarr = [1,2,3,4,5];
+const newnumarr = numarr.filter((num) => {
+    return num % 2 === 1;
+})
+
+
+
