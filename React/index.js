@@ -62,17 +62,18 @@ console.log(arr3); // [3, 4, 5]
 
 //従来
 
-const namearr = ['狐', '猫', '犬', '虎', '馬'];
-
-for (let index = 0; index < array.length; index++) {
-    console.log(array[index]);
-    
+const numarr = [1, 2, 3, 4, 5];
+let result = []
+for (let index = 0; index < numarr.length; index++) {
+    if (numarr[index] % 2 === 0){
+        result.push(numarr[index]);
+    }
 }
 
 namearr.map((name) => {
     return name;
 });
-
+/*
 const numarr = [1,2,3,4,5];
 const newnumarr = numarr.filter((num) => {
     return num % 2 === 1;
@@ -98,3 +99,6 @@ const checksum = (num1, num2) => {
 
 
 
+newarr2  = [1,2,3,3,4,5];
+
+newarr2.map(num())
