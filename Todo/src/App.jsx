@@ -3,19 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import AddTodo from './AddTodo'
-import status from 'daisyui/components/status'
 function App() {
-  const [newTask, setNewTask] = useState({
-    title : '',
-    status : '' 
-  });
-  function addTask() {
-    setNewTask({title: '', status:'InComplete'})
+  const [count, setCount] = useState(0)
 
-  }
   return (
     <>
-   <AddTodo />
+      {/* これはtodo追加 */}
+      {/* <button className="Neumorphism-button-del">del</button> */}
+    <AddTodo />
+
     <div className="Incomplete mb-10">
       <p className="text-2xl font-black text-left mb-3">InComplete</p>
       <div className=" w-[100%] h-[254px] rounded-[30px] bg-[#e0e0e0]"
