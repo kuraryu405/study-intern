@@ -33,10 +33,21 @@ function App() {
   }
 
   function moveInProgressTodo(id) {
+  const inprogressCount = todos.filter(todo => todo.status === 'InProgress').length;
+  if (inprogressCount >= 3) {
+    alert('進行中のタスクの上限が来ました');
+    return;
+  }
     setTodos(todos.map(todo => todo.id === id ? { ...todo, status: 'InProgress' } : todo));
+
   }
 
   function moveCompleteTodo(id) {
+    const completeCount = todos.filter(todo => todo.status === 'Complete').length;
+    if (completeCount >= 3) {
+      alert('完了済みのタスクの上限が来ました、削除してください');
+      return;
+    }
     setTodos(todos.map(todo => todo.id === id ? { ...todo, status: 'Complete' } : todo));
   }
   function deleteTodo(id) {
@@ -48,9 +59,9 @@ function App() {
       {/* これはtodo追加 */}
 
     <AddTodo todo={todo} setTodo={setTodo} addTodo={addTodo} />
-    <InComplete todos={todos} setTodos={setTodos} moveInProgressTodo={moveInProgressTodo} deleteTodo={deleteTodo} />
-    <InProgress todos={todos} setTodos={setTodos} moveCompleteTodo={moveCompleteTodo} deleteTodo={deleteTodo} />
-    <Complete todos={todos} setTodos={setTodos} deleteTodo={deleteTodo} />
+    <InComplete todos={todos} moveInProgressTodo={moveInProgressTodo} deleteTodo={deleteTodo} />
+    <InProgress todos={todos}  moveCompleteTodo={moveCompleteTodo} deleteTodo={deleteTodo} />
+    <Complete todos={todos}  deleteTodo={deleteTodo} />
     {/* ここより下は後でコンポーネント化する */}
     
 
