@@ -1,10 +1,11 @@
-var button = document.querySelector("button");
-var num1 = document.querySelector("num1");
-var num2 = document.querySelector("num2");
-button === null || button === void 0 ? void 0 : button.addEventListener("click", function () {
-    console.log("ボタンがクリックされました");
-});
-function sum(num1, num2) {
-    return num1 + num2;
-}
-console.log(sum(1, 2));
+// const button = document.querySelector("button");
+// const num1 = document.querySelector("num1")! as HTMLInputElement;
+// const num2 = document.querySelector("num2")! as HTMLInputElement;
+// button?.addEventListener("click", () => {
+//     console.log("ボタンがクリックされました");
+// });
+// function sum(num1: number, num2: number): number {
+//     return num1 + num2;
+// }
+// console.log(sum(1, 2));
+console.log("Hello World!!!!!!!!!!!!!!!!");
