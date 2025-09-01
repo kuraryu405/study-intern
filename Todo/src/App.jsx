@@ -1,49 +1,26 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import React,{ useReducer } from 'react'
+import React from 'react'
 import './App.css'
 import AddTodo from './AddTodo'
-import { use } from 'react'
+
 function App() {
   // ここにtodoの状態を管理するものを入れる
-  //読みさすさ重視でuseReducerを使う
-  const todoStatus = { title : '', status : '', due : ''};
-  const [todo, dispatch] = useReducer(reducer, todoStatus);
+  const [todo, setTodo] = useState({ title: '', status: '', due: '' });
 
   function addTodo(title, status, due) {
-    dispatch({type: 'addTodo', title: title, status: status, due: due});
+    // TODO: 実際のtodoリストに追加する処理を実装
+    console.log('Adding todo:', { title, status, due });
+
+    setTodo({ title: '', status: '', due: '' });
   }
-  function InProgress(title, status, due) {
-    dispatch({type: 'InProgress', title: title, status: status, due: due});
-  }
-  function Complete(title, status, due) {
-    dispatch({type: 'Complete', title: title, status: status, due: due});
-  }
-  function reducer(state, action) {
-    switch(action.type){
-      case 'addTodo':
-        // useReducerのステータスを変える
-        return {title: action.title, status: action.status, due: action.due};
-        break;
-      case 'InProgress':
-        // useReducerのステータスを変える
-        return {title: action.title, status: action.status, due: action.due};
-        break;
-      case 'Complete':
-        // useReducerのステータスを変える
-        return {title: action.title, status: action.status, due: action.due};
-        break;
-      default:
-        return state;
-        break;
-    }
-  }
+  
   return (
   <>
       {/* これはtodo追加 */}
-      {/* <button className="Neumorphism-button-del">del</button> */}
-    <AddTodo />
+
+    <AddTodo todo={todo} setTodo={setTodo} addTodo={addTodo} />
     {/* ここより下は後でコンポーネント化する */}
     <div className="Incomplete mb-10">
       <p className="text-2xl font-black text-left mb-3">InComplete</p>
