@@ -1,3 +1,20 @@
+type Conbinable = number | string;
+type ConversionDirection = "toNumber" | "toString";
+
+function conbine(input1: Conbinable, input2: Conbinable, conversion: ConversionDirection) {
+    let result;
+    if (typeof input1 === "number" && typeof input2 === "number" || conversion === "toNumber") {
+        result = +input1 + +input2;
+    } else {
+        result = input1.toString() + input2.toString();
+    }
+    return result;
+}
+
+
+
+
+
 // リテラル型の説明
 
 // リテラル型とは、特定の値そのものだけを許容する型です。
