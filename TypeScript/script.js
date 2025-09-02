@@ -1,9 +1,11 @@
+"use strict";
 // // const button = document.querySelector("button");
 // // const num1 = document.querySelector("num1")! as HTMLInputElement;
 // // const num2 = document.querySelector("num2")! as HTMLInputElement;
 // // button?.addEventListener("click", () => {
 // //     console.log("ボタンがクリックされました");
 // // });
+Object.defineProperty(exports, "__esModule", { value: true });
 // // function sum(num1: number, num2: number): number {
 // //     return num1 + num2;
 // // }
@@ -18,8 +20,8 @@
 // }
 // console.log(conbine(1, 2));
 // console.log(conbine("1", "2"));
-var array = [1, 2, "3", 4, 5];
-for (var _i = 0, array_1 = array; _i < array_1.length; _i++) {
-    var item = array_1[_i];
+const array = [1, 2, "3", 4, 5];
+for (const item of array) {
     console.log(item);
 }
+//# sourceMappingURL=script.js.map
