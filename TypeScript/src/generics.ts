@@ -46,3 +46,26 @@ function countAndDescribe<T extends LengthWise>(element: T): string {
 
 const result = countAndDescribe('Hello');
 console.log(result);
+
+
+interface User{
+    id: number;
+    name:string;
+    email:string;
+    isAdmin:boolean;
+}
+
+type PartialUser = Partial<User>;
+
+function updateUser(user: User, updates: PartialUser): User {
+    return { ...user, ...updates };
+}
+const user: User = {
+    id: 1,
+    name: 'Taro',
+    email: 'taro@example.com',
+    isAdmin: false
+};
+
+updateUser(user, { name: 'John' });
+

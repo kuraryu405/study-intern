@@ -29,4 +29,14 @@ function countAndDescribe(element) {
 }
 const result = countAndDescribe('Hello');
 console.log(result);
+function updateUser(user, updates) {
+    return { ...user, ...updates };
+}
+const user = {
+    id: 1,
+    name: 'Taro',
+    email: 'taro@example.com',
+    isAdmin: false
+};
+updateUser(user, { name: 'John' });
 //# sourceMappingURL=generics.js.map
