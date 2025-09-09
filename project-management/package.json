@@ -1,0 +1,20 @@
+{
+  "name": "project-management",
+  "version": "1.0.0",
+  "description": "プロジェクト管理アプリケーション",
+  "main": "dist/script.js",
+  "scripts": {
+    "start": "npm run build && node dist/script.js",
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "serve": "npx http-server . -p 3000 -o public/index.html"
+  },
+  "keywords": ["project", "management", "typescript"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "http-server": "^14.0.0"
+  }
+}
