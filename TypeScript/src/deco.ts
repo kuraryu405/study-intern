@@ -35,7 +35,7 @@
 
 class Product{
     title: string;
-    private _price: number;
+    private _price: number = 0;
 
     set price(val: number){
         if (val > 0){
