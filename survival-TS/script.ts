@@ -20,8 +20,8 @@ strings = ['a', 'b', 'c'];
 let arr : readonly string[];
 arr = ['a', 'b', 'c'];
 
-const numbers = [1, 2, 3];
+const numbers1 = [1, 2, 3];
  
-for (const num of numbers) {
+for (const num of numbers1) {
   console.log(num); // 1, 2, 3と出力される
 }
