@@ -1,11 +1,6 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-export default function InComplete({ todos, setTodos, moveInProgressTodo, deleteTodo }) {
+export default function InComplete({ todos, moveInProgressTodo, deleteTodo }: {todos : CreateTodoDto; moveInProgressTodo : number; deleteTodo : number }) {
     return (
-        <>
+        <> 
             <div className="Incomplete mb-10">
                 <p className="text-2xl font-black text-left mb-3">InComplete</p>
                 <div

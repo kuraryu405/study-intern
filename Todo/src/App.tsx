@@ -11,7 +11,7 @@ function App() {
   const [todo, setTodo] = useState<CreateTodoDto>({} as CreateTodoDto);
 
  
-  function addTodo(title: string, status: string, due: string) {
+  function addTodo(dto : CreateTodoDto) {
     const incompleteCount = todos.filter(todo => todo.status === 'InComplete').length;
     
     if (incompleteCount >= 3) {
@@ -19,13 +19,14 @@ function App() {
       return; 
     }
   
-    if (title.trim() === '') {
+    if (dto.title.trim() === '') {
       alert('タイトルを入力してください');
       return;
     }
   
-    console.log('Adding todo:', { title, status, due });
-    setTodos([...todos, { id: Date.now(), title, status, due }]);
+    console.log('Adding todo:', {dto});
+    let newTodo = { id: Date.now(), ...dto }
+    setTodos([...todos, newTodo]);
     setTodo({ title: '', status: '', due: '' });
   }
 

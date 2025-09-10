@@ -1,8 +1,7 @@
 import type { Dispatch, SetStateAction } from 'react'
 
 
-export default function AddTodo({ todo, setTodo, addTodo }: { todo: Todo; setTodo: Dispatch<SetStateAction<Todo>>; addTodo: (title: string, status: string, due: string) => void }) {
-
+export default function AddTodo({ todo, setTodo, addTodo }: { todo: CreateTodoDto; setTodo: Dispatch<SetStateAction<CreateTodoDto>>; addTodo: ( dto : CreateTodoDto) => void }) {
     return (
         <>
         <div className="text-left">
@@ -13,7 +12,7 @@ export default function AddTodo({ todo, setTodo, addTodo }: { todo: Todo; setTod
                 value={todo.title} 
                 onChange={(e) => setTodo({...todo, title: e.target.value, status: 'InComplete', due: ''})}
             />
-            <button className="Neumorphism-button" onClick={() => addTodo(todo.title, todo.status, todo.due)}>Add</button>
+            <button className="Neumorphism-button" onClick={() => addTodo(todo)}>Add</button>
         </div>        
         </>
         
