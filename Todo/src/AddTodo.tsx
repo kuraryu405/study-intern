@@ -1,10 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import type { Dispatch, SetStateAction } from 'react'
 
 
-export default function AddTodo({ todo, setTodo, addTodo }) {
+export default function AddTodo({ todo, setTodo, addTodo }: { todo: Todo; setTodo: Dispatch<SetStateAction<Todo>>; addTodo: (title: string, status: string, due: string) => void }) {
 
     return (
         <>

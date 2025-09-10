@@ -5,12 +5,7 @@ import InProgress from './InProgress';
 import Complete from './Complete';
 
 function App() {
-  type Todo = {
-    id: number;
-    title: string;
-    status: string;
-    due: string;
-  }
+
   // ここにtodoの状態を管理するものを入れる
   const [todos, setTodos] = useState<Todo[]>([]);
   const [todo, setTodo] = useState({ title: '', status: '', due: '' });
