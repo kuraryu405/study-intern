@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import './App.css'
-import AddTodo from './AddTodo'
-import InComplete from './InComplete'
-import InProgress from './InProgress'
-import Complete from './Complete'
+import { useState } from 'react';
+// @ts-ignore
+import AddTodo from './AddTodo';
+import InComplete from './InComplete';
+import InProgress from './InProgress';
+import Complete from './Complete';
 
 function App() {
   // ここにtodoの状態を管理するものを入れる
