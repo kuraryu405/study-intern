@@ -63,8 +63,8 @@ function App() {
       {/* これはtodo追加 */}
 
     <AddTodo todo={todo} setTodo={setTodo} addTodo={addTodo} />
-    <InComplete todos={todos} moveInProgressTodo={moveInProgressTodo} deleteTodo={deleteTodo} />
-    <InProgress todos={todos}  moveCompleteTodo={moveCompleteTodo} deleteTodo={deleteTodo} />
+    <InComplete todos={todos} setTodos={setTodos} moveInProgressTodo={moveInProgressTodo} deleteTodo={deleteTodo} />
+    <InProgress todos={todos} moveCompleteTodo={moveCompleteTodo} deleteTodo={deleteTodo} />
     <Complete todos={todos}  deleteTodo={deleteTodo} />
     
 
