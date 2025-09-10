@@ -36,10 +36,7 @@ function App() {
     alert('進行中のタスクの上限が来ました');
     return;
   }
-  if (!id){ 
     setTodos(todos.map(todo => todo.id === id ? { ...todo, status: 'InProgress' } : todo));
-  }
-
   }
 
   function moveCompleteTodo(id: number) {
@@ -59,7 +56,7 @@ function App() {
       {/* これはtodo追加 */}
 
     <AddTodo todo={todo} setTodo={setTodo} addTodo={addTodo} />
-    <InComplete todos={todos} setTodos={setTodos} moveInProgressTodo={moveInProgressTodo} deleteTodo={deleteTodo} />
+    <InComplete todos={todos} moveInProgressTodo={moveInProgressTodo} deleteTodo={deleteTodo} />
     <InProgress todos={todos} moveCompleteTodo={moveCompleteTodo} deleteTodo={deleteTodo} />
     <Complete todos={todos}  deleteTodo={deleteTodo} />
     

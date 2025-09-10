@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-export default function InProgress({ todos, moveCompleteTodo, deleteTodo }) {
+export default function InProgress({ todos, moveCompleteTodo, deleteTodo }: { todos: Todo[]; moveCompleteTodo: (id: number) => void; deleteTodo: (id: number) => void }) {
     return (
         <>
             <div className="Incomplete mb-10">

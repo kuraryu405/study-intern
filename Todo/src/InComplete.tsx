@@ -1,4 +1,4 @@
-export default function InComplete({ todos, moveInProgressTodo, deleteTodo }: {todos : CreateTodoDto; moveInProgressTodo : number; deleteTodo : number }) {
+export default function InComplete({ todos, moveInProgressTodo, deleteTodo }: { todos: Todo[]; moveInProgressTodo: (id: number) => void; deleteTodo: (id: number) => void }) {
     return (
         <> 
             <div className="Incomplete mb-10">

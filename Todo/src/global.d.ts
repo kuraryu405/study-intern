@@ -1,14 +1,16 @@
+type TodoStatus = 'InComplete' | 'InProgress' | 'Complete'| string;
+
 type Todo = {
     id: number;
     title: string;
-    status: string;
+    status: TodoStatus;
     due: string;
   }
 
-type TodoStatus = 'todo' | 'in_progress' | 'done';
+
 
 type CreateTodoDto = {
     title: string;
-    status: string;
+    status: TodoStatus;
     due: string;
 }

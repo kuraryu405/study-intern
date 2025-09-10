@@ -1,7 +1,7 @@
 // @ts-ignore
 import './App.css'
 
-export default function Complete({ todos: Todo[], deleteTodo: number }) {
+export default function Complete({ todos, deleteTodo }: { todos: Todo[]; deleteTodo: (id: number) => void }) {
     return (
         <>
             <div className="Complete mb-10">
