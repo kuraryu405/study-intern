@@ -66,7 +66,6 @@ function App() {
     <InComplete todos={todos} moveInProgressTodo={moveInProgressTodo} deleteTodo={deleteTodo} />
     <InProgress todos={todos}  moveCompleteTodo={moveCompleteTodo} deleteTodo={deleteTodo} />
     <Complete todos={todos}  deleteTodo={deleteTodo} />
-    {/* ここより下は後でコンポーネント化する */}
     
 
     </>
