@@ -1,17 +1,22 @@
 import { useState } from 'react';
-// @ts-ignore
 import AddTodo from './AddTodo';
 import InComplete from './InComplete';
 import InProgress from './InProgress';
 import Complete from './Complete';
 
 function App() {
+  type Todo = {
+    id: string;
+    title: string;
+    status: string;
+    due: Date;
+  }
   // ここにtodoの状態を管理するものを入れる
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState<Todo[]>([]);
   const [todo, setTodo] = useState({ title: '', status: '', due: '' });
 
  
-  function addTodo(title, status, due) {
+  function addTodo(title: string, status: string, due: string) {
     const incompleteCount = todos.filter(todo => todo.status === 'InComplete').length;
     
     if (incompleteCount >= 3) {
@@ -29,13 +34,15 @@ function App() {
     setTodo({ title: '', status: '', due: '' });
   }
 
-  function moveInProgressTodo(id) {
+  function moveInProgressTodo(id: string) {
   const inprogressCount = todos.filter(todo => todo.status === 'InProgress').length;
   if (inprogressCount >= 3) {
     alert('進行中のタスクの上限が来ました');
     return;
   }
+  if (!id){ 
     setTodos(todos.map(todo => todo.id === id ? { ...todo, status: 'InProgress' } : todo));
+  }
 
   }
 
