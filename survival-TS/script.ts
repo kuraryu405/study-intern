@@ -25,3 +25,36 @@ const numbers1 = [1, 2, 3];
 for (const num of numbers1) {
   console.log(num); // 1, 2, 3と出力される
 }
+
+
+// オブジェクトリテラル
+const John = { name: 'John', age: 30 };
+// プロパティ：値,・・・・
+
+
+// マップオブジェクト
+const map = new Map();
+map.set("name", "John");
+map.set("age", "20");
+
+console.log(map.get("name"));
+
+// Map {
+//     "name" => "John",
+//     "age"  => "20"
+//   }
+  
+
+// switch文
+const color: string = "blue";
+
+switch (color) {
+  case "red":
+    console.log("Color is red.");
+    break;
+  case "blue":
+    console.log("Color is blue.");
+    break;
+  default:
+    console.log("Color is neither red nor blue.");
+}
