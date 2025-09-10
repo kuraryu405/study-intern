@@ -8,7 +8,7 @@ function App() {
 
   // ここにtodoの状態を管理するものを入れる
   const [todos, setTodos] = useState<Todo[]>([]);
-  const [todo, setTodo] = useState({ title: '', status: '', due: '' });
+  const [todo, setTodo] = useState<CreateTodoDto>({} as CreateTodoDto);
 
  
   function addTodo(title: string, status: string, due: string) {

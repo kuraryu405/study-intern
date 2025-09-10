@@ -6,3 +6,9 @@ type Todo = {
   }
 
 type TodoStatus = 'todo' | 'in_progress' | 'done';
+
+type CreateTodoDto = {
+    title: string;
+    status: string;
+    due: string;
+}
