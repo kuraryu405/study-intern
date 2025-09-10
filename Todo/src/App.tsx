@@ -6,10 +6,10 @@ import Complete from './Complete';
 
 function App() {
   type Todo = {
-    id: string;
+    id: number;
     title: string;
     status: string;
-    due: Date;
+    due: string;
   }
   // ここにtodoの状態を管理するものを入れる
   const [todos, setTodos] = useState<Todo[]>([]);
@@ -34,7 +34,7 @@ function App() {
     setTodo({ title: '', status: '', due: '' });
   }
 
-  function moveInProgressTodo(id: string) {
+  function moveInProgressTodo(id: number) {
   const inprogressCount = todos.filter(todo => todo.status === 'InProgress').length;
   if (inprogressCount >= 3) {
     alert('進行中のタスクの上限が来ました');
@@ -46,7 +46,7 @@ function App() {
 
   }
 
-  function moveCompleteTodo(id) {
+  function moveCompleteTodo(id: number) {
     const completeCount = todos.filter(todo => todo.status === 'Complete').length;
     if (completeCount >= 3) {
       alert('完了済みのタスクの上限が来ました、削除してください');
@@ -54,7 +54,7 @@ function App() {
     }
     setTodos(todos.map(todo => todo.id === id ? { ...todo, status: 'Complete' } : todo));
   }
-  function deleteTodo(id) {
+  function deleteTodo(id: number) {
     setTodos(todos.filter(todo => todo.id !== id));
   }
   
