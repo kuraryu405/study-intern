@@ -86,3 +86,4 @@ class Circle {
   console.log(circle.radius);
   circle.radius = -2;
   // 例外: 'Invalid radius value'
+//   memo Katsute.code-background

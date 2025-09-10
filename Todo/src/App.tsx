@@ -1,7 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import React from 'react'
 import './App.css'
 import AddTodo from './AddTodo'
 import InComplete from './InComplete'
