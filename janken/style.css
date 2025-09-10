@@ -42,6 +42,9 @@ h1{
 .btn:last-child {
     margin-right: 0;
 }
+.btn:first-child {
+    margin-left: 0;
+}
 
 
 
@@ -55,10 +58,17 @@ h1{
     margin-top: 60px;
     text-align: center;
     font-size: larger;
+    z-index: 2;
 }
 
 #result-img {
-    margin-top: 60px;
+    margin-top: 15px;
     text-align: center;
     font-size: larger;
+#result-img img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    z-index: 1;
+}
 }
