@@ -2,6 +2,7 @@ import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common'
 import { ItemsService } from './items.service';
 import type { Item } from './items.model';
 import { CreateItemDto } from './dto/create-item.dto';
+import { ParseUUIDPipe } from '@nestjs/common';
 @Controller('items')
 export class ItemsController {
     constructor(private readonly itemsService: ItemsService) {
@@ -13,7 +14,7 @@ export class ItemsController {
     }
 
     @Get(':id')
-    findById(@Param('id') id: string): Item | undefined{
+    findById(@Param('id', ParseUUIDPipe) id: string): Item | undefined{
         return this.itemsService.findById(id);
     }
 
@@ -25,12 +26,12 @@ export class ItemsController {
     }
 
     @Put(':id')
-    updateStatus(@Param('id') id: string, @Body('status') status: 'ON_SALE' | 'SOLD_OUT'): Item | undefined{
+    updateStatus(@Param('id', ParseUUIDPipe) id: string, @Body('status') status: 'ON_SALE' | 'SOLD_OUT'): Item | undefined{
         return this.itemsService.updateStatus(id, status);
     }
 
     @Delete(':id')
-    delete(@Param('id') id: string): Item | undefined{
+    delete(@Param('id', ParseUUIDPipe) id: string): Item | undefined{
         return this.itemsService.delete(id);
     }
 }
