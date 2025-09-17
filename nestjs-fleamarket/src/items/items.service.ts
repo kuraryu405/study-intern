@@ -25,4 +25,13 @@ export class ItemsService {
         }
         return undefined;
     }
+
+    delete(id: string): Item | undefined{
+        const item = this.findById(id);
+        if (item) {
+            this.items = this.items.filter(item => item.id !== id);
+            return item;
+        }
+        return undefined;
+    }
 }
