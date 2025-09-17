@@ -9,7 +9,11 @@ export class ItemsService {
         return this.items;
         // return 'This is ItemsService';
     }
-    create(item: Item):Item{
+    create(CreateItemDto: CreateItemDto):Item{
+        const item: Item = {
+            ...CreateItemDto,
+            status: 'ON_SALE'
+        }
         this.items.push(item);
         return item;
     }
