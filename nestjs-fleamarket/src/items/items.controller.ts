@@ -21,9 +21,7 @@ export class ItemsController {
     create(
         @Body() createItemDto: CreateItemDto,
     ): Item {
-        const { id, name, price, description } = createItemDto;
-        const item: Item = { id, name, price, description, status: 'ON_SALE'};
-        return this.itemsService.create(item);
+        return this.itemsService.create(createItemDto);
     }
 
     @Put(':id')
