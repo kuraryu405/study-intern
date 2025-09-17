@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Item } from './items.model';
 import { CreateItemDto } from './dto/create-item.dto';
 import { v4 as uuidv4 } from 'uuid';
+import { NotFoundException } from '@nestjs/common';
 
 @Injectable()
 export class ItemsService {
@@ -21,7 +22,11 @@ export class ItemsService {
         return item;
     }
     findById(id: string): Item | undefined{
-        return this.items.find(item => item.id === id);
+        const item = this.items.find(item => item.id === id);
+        if (!item) {
+            throw new NotFoundException('Item not found');
+        }
+        return item;
     }
 
     updateStatus(id: string, status: 'ON_SALE' | 'SOLD_OUT'): Item | undefined{
