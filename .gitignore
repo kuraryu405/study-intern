@@ -3,3 +3,4 @@ react-sample-app
 node_modules
 .env
 docker
+/generated/prisma
