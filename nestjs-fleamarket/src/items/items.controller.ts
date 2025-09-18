@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common';
 import { ItemsService } from './items.service';
-import type { Item } from './items.model';
+import type { Item } from '../../generated/prisma';
 import { CreateItemDto } from './dto/create-item.dto';
 import { ParseUUIDPipe } from '@nestjs/common';
 @Controller('items')
@@ -19,10 +19,10 @@ export class ItemsController {
     }
 
     @Post()
-    create(
+    async create(
         @Body() createItemDto: CreateItemDto,
-    ): Item {
-        return this.itemsService.create(createItemDto);
+    ): Promise<Item> {
+        return await this.itemsService.create(createItemDto);
     }
 
     @Put(':id')

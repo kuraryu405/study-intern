@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Item, ItemStatus } from '../../generated/prisma';
+import { Item, ItemStatus } from '../../generated/prisma/client';
 import { CreateItemDto } from './dto/create-item.dto';
 import { NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
