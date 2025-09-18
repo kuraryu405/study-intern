@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Item, ItemStatus } from '../../generated/prisma/client';
+import { Item, ItemStatus } from '../../generated/prisma';
 import { CreateItemDto } from './dto/create-item.dto';
 import { NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
@@ -9,8 +9,9 @@ export class ItemsService {
     constructor(private readonly prismaService: PrismaService) {}
     private items: Item[] = [];
     
-    findAll(): Item[]{
-        return this.items;
+    async findAll(): Promise<Item[]>{
+        // return this.items;
+        return await this.prismaService.item.findMany();
         // return 'This is ItemsService';
     }
     async create(createItemDto: CreateItemDto): Promise<Item>{
