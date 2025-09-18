@@ -13,3 +13,18 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Item{
+  id String @id @default(uuid()) @db.Uuid
+  name String @db.VarChar(255)
+  price Int
+  description String?
+  status ItemStatus @default(ON_SALE)
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  updatedAt DateTime @updatedAt @db.Timestamp(0)
+}
+
+enum ItemStatus {
+  ON_SALE
+  SOLD_OUT
+}
