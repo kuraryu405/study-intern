@@ -9,8 +9,8 @@ export class ItemsController {
         this.itemsService = itemsService;
     }
     @Get()
-    findAll(): Item[]{
-        return this.itemsService.findAll();
+    async findAll(): Promise<Item[]>{
+        return await this.itemsService.findAll();
     }
 
     @Get(':id')
