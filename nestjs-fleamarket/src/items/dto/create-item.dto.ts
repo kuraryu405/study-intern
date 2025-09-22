@@ -14,4 +14,8 @@ export class CreateItemDto {
     @IsString()
     @MaxLength(1000)
     description?: string;
+
+    @IsString()
+    @IsNotEmpty()
+    userId: string;
 }

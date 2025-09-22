@@ -15,18 +15,14 @@ export class ItemsService {
         // return 'This is ItemsService';
     }
     async create(createItemDto: CreateItemDto): Promise<Item>{
-        const {name, price, description} = createItemDto;
+        const {name, price, description, userId} = createItemDto;
         return await this.prismaService.item.create({
             data: {
                 name,
                 price,
                 description,
                 status: ItemStatus.ON_SALE,
-                user: {
-                    connect: {
-                        id: createItemDto.userId,
-                    },
-                },
+                user: { connect: { id: userId } },
             }
         });
     }
